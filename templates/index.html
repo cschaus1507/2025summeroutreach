@@ -26,6 +26,12 @@
       background-color: rgba(0,0,0,0.7);
       border-radius: 10px;
     }
+    p.instructions {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      text-align: center;
+      color: #FFD700;
+    }
     .event-card {
       border: 1px solid #FFD700;
       border-radius: 8px;
@@ -34,15 +40,17 @@
     }
     .event-card label {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       cursor: pointer;
     }
     .event-card input {
       margin-right: 10px;
+      margin-top: 5px;
     }
     .event-details {
       font-size: 0.9em;
       color: #ccc;
+      line-height: 1.4em;
     }
     input[type="text"] {
       width: 100%;
@@ -78,6 +86,9 @@
 <body>
   <header>Warlocks Robotics 1507 - Summer Outreach Poll</header>
   <main>
+    <p class="instructions">
+      Warlock members, please indicate your interest and availability to attend the summer outreach events we have listed below.
+    </p>
     <form method="POST">
       <label>Your Name:
         <input type="text" name="name" required>
@@ -90,7 +101,9 @@
               <div>
                 <strong>{{ event.name }}</strong>
                 <div class="event-details">
-                  {{ event.date }} {% if event.time %}- {{ event.time }}{% endif %}{% if event.location %} - {{ event.location }}{% endif %}
+                  {% if event.date %}<div><strong>Date:</strong> {{ event.date }}</div>{% endif %}
+                  {% if event.time %}<div><strong>Time:</strong> {{ event.time }}</div>{% endif %}
+                  {% if event.location %}<div><strong>Location:</strong> {{ event.location }}</div>{% endif %}
                 </div>
               </div>
             </label>
