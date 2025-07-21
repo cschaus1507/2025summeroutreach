@@ -11,9 +11,8 @@ EVENTS = [
         "name": "STEM Day @ Niagara Cty Fair",
         "date": "Friday, August 1, 2025",
         "time": "12:00 PM – 6:00 PM",
-        "location": "NC Fairgrounds"
-        "link": "https://docs.google.com/spreadsheets/d/1-1bjIfMdGE5gYfaER2hgGOoLTGiUx2KVMdD8M9r2IC0/edit?usp=sharing"
-
+        "location": "NC Fairgrounds",
+        "link_html": '<a href="https://docs.google.com/spreadsheets/d/1-1bjIfMdGE5gYfaER2hgGOoLTGiUx2KVMdD8M9r2IC0/edit?usp=sharing" target="_blank" style="color:#FFD700; font-weight:bold;">Further details</a>'
     },
     {
         "name": "Until the Wheels Fall Off",
@@ -52,6 +51,7 @@ EVENTS = [
         "location": ""
     }
 ]
+
 def init_db():
     if not os.path.exists(DATABASE):
         conn = sqlite3.connect(DATABASE)
@@ -98,3 +98,4 @@ def summary():
 if __name__ == "__main__":
     init_db()
     app.run(host="0.0.0.0", port=5000)
+
