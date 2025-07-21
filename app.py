@@ -8,55 +8,48 @@ DATABASE = "responses.db"
 
 EVENTS = [
     {
-        "name": "Touch A Truck",
-        "date": "Saturday, July 26, 2025",
-        "time": "9:00 AM – 12:00 PM",
-        "location": "Outwater Park"
-    },
-    {
-        "name": "STEM Day – Niagara County Fair",
+        "name": "STEM Day @ Niagara Cty Fair",
         "date": "Friday, August 1, 2025",
         "time": "12:00 PM – 6:00 PM",
-        "location": "Niagara County Fair Grounds"
+        "location": "NC Fairgrounds"
+    },
+    {
+        "name": "Until the Wheels Fall Off",
+        "date": "Saturday, August 2, 2025",
+        "time": "",
+        "location": "Railyard Skate Park"
+    },
+    {
+        "name": "Read with a Warlock",
+        "date": "Tuesday, August 5, 2025",
+        "time": "12:30 PM – 1:30 PM",
+        "location": "Lock City Books"
     },
     {
         "name": "Food Fest",
         "date": "Sunday, August 10, 2025",
-        "time": "Time TBD",
-        "location": "Main Street, Lockport"
+        "time": "",
+        "location": "Main Street"
     },
     {
-        "name": "GM Buy America Day",
+        "name": "UAW/GM Buy America Day",
         "date": "Saturday, August 16, 2025",
-        "time": "Time TBD",
-        "location": ""
+        "time": "",
+        "location": "Delphi Plant"
     },
     {
-        "name": "Cornerstone Community Day",
+        "name": "CCFCU Community Day",
         "date": "Saturday, August 23, 2025",
         "time": "",
-        "location": "Kenan Center, Lockport"
+        "location": "Kenan Center"
     },
     {
-        "name": "Canal Clean Up Event",
-        "date": "Date TBD",
-        "time": "",
-        "location": ""
-    },
-    {
-        "name": "Read with a Warlock Children's Outreach",
-        "date": "Date TBD",
-        "time": "",
-        "location": ""
-    },
-    {
-        "name": "Possible Children's Hospital Visit",
+        "name": "Canal Cleanup",
         "date": "Date TBD",
         "time": "",
         "location": ""
     }
 ]
-
 def init_db():
     if not os.path.exists(DATABASE):
         conn = sqlite3.connect(DATABASE)
