@@ -12,6 +12,8 @@ EVENTS = [
         "date": "Friday, August 1, 2025",
         "time": "12:00 PM – 6:00 PM",
         "location": "NC Fairgrounds"
+        "link": "https://docs.google.com/spreadsheets/d/1-1bjIfMdGE5gYfaER2hgGOoLTGiUx2KVMdD8M9r2IC0/edit?usp=sharing"
+
     },
     {
         "name": "Until the Wheels Fall Off",
