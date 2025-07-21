@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       background: #003366 url("{{ url_for('static', filename='warlocks_logo.png') }}") no-repeat center center fixed;
-      background-size: contain;
+      background-size: 1100px;
       color: #ffffff;
     }
     header {
@@ -104,8 +104,7 @@
                   {% if event.date %}<div><strong>Date:</strong> {{ event.date }}</div>{% endif %}
                   {% if event.time %}<div><strong>Time:</strong> {{ event.time }}</div>{% endif %}
                   {% if event.location %}<div><strong>Location:</strong> {{ event.location }}</div>{% endif %}
-                  {% if event.link %}<div><a href="{{ event.link }}" target="_blank" style="color:#FFD700; font-weight:bold;">🔗 Provide additional details here</a></div>
-                  {% endif %}
+                  {% if event.link_html %}<div>{{ event.link_html | safe }}</div>{% endif %}
                 </div>
               </div>
             </label>
@@ -118,3 +117,4 @@
   </main>
 </body>
 </html>
+
